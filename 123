@@ -1,0 +1,27 @@
+class Animal:
+    def __init__(self, name, species):
+        self.name = name
+        self.species = species
+
+    def make_sound(self):
+        pass
+
+class Dog(Animal):
+    def __init__(self, name, breed):
+        super().__init__(name, species="Dog")
+        self.breed = breed
+
+    def make_sound(self):
+        return "Woof! Woof!"
+
+class Cat(Animal):
+    def __init__(self, name, color):
+        super().__init__(name, species="Cat")
+        self.color = color
+    def make_sound(self):
+        return "Meow!"
+dog1 = Dog("Buddy", "Golden Retriever")
+cat1 = Cat("Whiskers", "White")
+
+print(f"{dog1.name} is a {dog1.breed} and says: {dog1.make_sound()}")
+print(f"{cat1.name} is a {cat1.color} cat and says: {cat1.make_sound()}")
